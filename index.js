@@ -6,6 +6,8 @@ $(document).ready(function () {
    $(".input").val("");
    $(".gif").removeAttr("src")
 
+   let audio = new Audio("/audio/firework-show-short-64657.mp3");
+
    let regExp = new RegExp("^([1-9]|1[0-9]|2[0-5])$");
 
 
@@ -30,6 +32,9 @@ $(document).ready(function () {
       $(".start").show()
       $(".input").val("");
       $(".check").html("");
+   $(".gif").removeAttr("src")
+   audio.pause()
+
 
 
 
@@ -56,7 +61,8 @@ $(document).ready(function () {
             $(".input").prop("disabled", true);
             $(".restart-btn").show()
             $(".guess-btn").hide()
-            // $(".gif").attr('src=', "img/giphy-unscreen.gif")
+            $(".gif").attr('src', "img/giphy-unscreen.gif")
+            audio.play()
 
 
 
