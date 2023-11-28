@@ -61,7 +61,7 @@ $(document).ready(function () {
             $(".input").prop("disabled", true);
             $(".restart-btn").show()
             $(".guess-btn").hide()
-            $(".gif").attr('src', "img/giphy-unscreen.gif")
+            $(".gif").attr('src', "img/firework.gif")
             audio.play()
 
 
