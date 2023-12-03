@@ -10,14 +10,18 @@ $(document).ready(function () {
 	let regExp = new RegExp("^([1-9]|1[0-9]|2[0-5])$");
 
 	function arrows() {
-		let i = 0;
 		$(`[data-arrow='up']`).on("click", () => {
+			let inputVal = Number($(".input").val());
+			let i = inputVal;
+
 			if (i >= 0 && i < 25) {
 				i++;
 				$(".input").val(i);
 			}
 		});
 		$(`[data-arrow='down']`).on("click", () => {
+			let inputVal = Number($(".input").val());
+			let i = inputVal;
 			if (i > 1 && i <= 25) {
 				i--;
 				$(".input").val(i);
