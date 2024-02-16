@@ -111,8 +111,17 @@ img {
   width: 100%;
   object-fit: cover;
 }
+body > p {
+  text-align: center;
+  margin-top: 3em;
+  color: #f1f1f1;
+}
+body > p a{
+  color:rgb(255, 213, 0);
+
+}
 @media (max-width: 500px) {
-  .title {
+  .title , .check {
     font-size: 1.5rem;
     text-align: center;
   }

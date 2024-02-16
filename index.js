@@ -6,7 +6,7 @@ $(document).ready(function () {
 	$(".input").val("");
 	$(".gif").removeAttr("src");
 
-	let audio = new Audio("/audio/firework-show-short-64657.mp3");
+	let audio = new Audio("./audio/firework-show-short-64657.mp3");
 	let regExp = new RegExp("^([1-9]|1[0-9]|2[0-5])$");
 
 	function arrows() {
@@ -15,7 +15,7 @@ $(document).ready(function () {
 			let i = inputVal;
 
 			if (i >= 0 && i < 25) {
-				i++;
+				i+=1;
 				$(".input").val(i);
 			}
 		});
@@ -23,7 +23,7 @@ $(document).ready(function () {
 			let inputVal = Number($(".input").val());
 			let i = inputVal;
 			if (i > 1 && i <= 25) {
-				i--;
+				i-=1;
 				$(".input").val(i);
 			}
 		});
@@ -76,6 +76,7 @@ $(document).ready(function () {
 		$(".input").val("");
 		$(".check").html("");
 		$(".gif").removeAttr("src");
+		$(".gif").css('display', 'none')
 		audio.pause();
 	});
 
@@ -94,6 +95,7 @@ $(document).ready(function () {
 				$(".restart-btn").show();
 				$(".guess-btn").hide();
 				$(".gif").attr("src", "img/firework.gif");
+				$(".gif").css('display' , 'block')
 				audio.currentTime = 0;
 				audio.play();
 			} else if (inputVal == "") {
@@ -106,7 +108,7 @@ $(document).ready(function () {
 		} else {
 			$(".check").html("Only input numbers between 1-25");
 
-			$(".check").css("font-size", "1.9rem");
+
 		}
 	});
 });
